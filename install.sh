@@ -1,5 +1,4 @@
-curl -o ~/.vimrc https://github.com/davidsuh11/vimrc/blob/main/.vimrc
-
+curl -o ~/.vimrc https://raw.githubusercontent.com/davidsuh11/vimrc/main/.vimrc
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
