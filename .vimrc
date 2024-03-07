@@ -36,8 +36,8 @@ inoremap <silent><expr> <Tab>
       \ coc#refresh()
 
 let g:ale_open_list = 1
-let g:ale_cpp_cc_executable = 'mpic++'
-let cpp_opts = '-std=c++20 -Wall -Wextra -fopenmp'
+let g:ale_cpp_cc_executable = 'g++-13 '
+let g:cpp_opts = '-std=c++17 -Wall -Wextra -fopenmp'
 let g:ale_linters = { 'cpp': ['gcc'] }
 let g:ale_cpp_cc_options    = cpp_opts
 let g:ale_cpp_gcc_options   = cpp_opts
@@ -73,7 +73,10 @@ set noshiftround
 
 " escape
 inoremap jj <esc>
-vnoremap jj <esc>
+
+" tab movement 
+nnoremap <F7> :tabp<CR>
+nnoremap <F8> :tabn<CR>
 
 " folding
 set foldmethod=syntax
@@ -139,3 +142,6 @@ map <leader>l :set list!<CR> " Toggle tabs and EOL
 set t_Co=256
 set background=dark
 colorscheme jellybeans
+
+au BufRead,BufNewFile *.g set filetype=antlr3
+au BufRead,BufNewFile *.g4 set filetype=antlr4
