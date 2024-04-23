@@ -18,6 +18,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'dense-analysis/ale'
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'morhetz/gruvbox'
+  Plug 'voldikss/vim-floaterm'
 call plug#end()
 syntax on
 
@@ -89,6 +90,9 @@ set noshiftround
 " escape
 inoremap jj <esc>
 
+nnoremap <F4> <C-\><C-n>:FloatermToggle <CR>
+inoremap <F4> <C-\><C-n>:FloatermToggle <CR>
+tnoremap <F4> <C-\><C-n>:FloatermToggle <CR>
 " tab movement 
 nnoremap <F7> :tabp<CR>
 nnoremap <F8> :tabn<CR>
